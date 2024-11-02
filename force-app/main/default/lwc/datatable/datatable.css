@@ -1,0 +1,34 @@
+.editable-cell {
+    position: relative;
+}
+
+.email-input {
+    width: 100%;
+}
+
+.edit-icon {
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.editable-cell:hover .edit-icon {
+    visibility: visible;
+}
+
+.slds-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.slds-table th, .slds-table td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.slds-table th {
+    background-color: #f3f6f9;
+}
+
+.slds-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

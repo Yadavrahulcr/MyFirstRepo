@@ -1,0 +1,22 @@
+<template>
+                  // this card explains one way data binding 
+    <lightning-card title=" onne  way data binding js to html">
+        <div class="slds-m-around_medium">
+           <div> heloo these are my first words in practice</div>   
+           <div>hi my name is {name}</div>                     // this is one way data binding  with simple properties
+           <div>my age is {obj.age} and i am {obj.sex}</div>   // this is one way data binding with object.
+        </div>
+         </lightning-card>
+
+                ///  this card is for the undearstandig of methods and two data binging 
+
+    <lightning-card title="Methods and  two way data binging   js to html and vice-versa">
+        <div class="slds-m-around_medium">
+         <lightning-input  label="enter job des." onkeyup={handlechange}> </lightning-input>
+         <div> my name is  {name1} and i work as {jobDec}</div>
+            
+        </div>
+    </lightning-card>
+
+
+</template>

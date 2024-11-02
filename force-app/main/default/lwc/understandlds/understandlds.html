@@ -1,0 +1,41 @@
+<template>
+     <lightning-card title="lightening Record form">
+        <div class="slds-var-m-around_medium" >
+       <!-- note that  object api name is mast to pass  -->
+              <!-- also note that if we provide id it will work as edit from and else it will act as create form  -->
+                <!-- <lightning-record-form 
+                object-api-name="Account"
+                layout-type="Full"   
+                columns="2" 
+                mode="insert" 
+                >
+                </lightning-record-form>-->
+                <!-- {recordId} -->
+                <lightning-record-form
+                object-api-name={objectApiName}
+                
+                layout-type="Compact"
+                columns="4"
+                mode="readonly"
+                record-id={recordId}
+                >
+
+                </lightning-record-form>
+
+                <lightning-record-form
+                object-api-name={objectApiName}
+                
+                fields={fields}
+                columns="5"
+                mode="readonly"
+                record-id={recordId}
+                >
+
+                </lightning-record-form>
+
+
+
+
+        </div>
+     </lightning-card>
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <!-- <lightning-card title="parent to child communication with simple data ">
+        <div class="slds-var-m-around_medium">
+           <div>parent section</div>
+           <c-parentchild2 nameofyourson = {name}></c-parentchild2>
+        </div>
+    </lightning-card> -->
+
+<!-- 
+    <lightning-card title="parent to child communication with complexdata data ">
+        <div class="slds-var-m-around_medium">
+           <div>parent section</div>
+           <c-parentchild2 human={properties}></c-parentchild2>
+        </div>
+    </lightning-card> -->
+
+
+    <!-- <lightning-card title="parent to child communication with action on child  ">
+        <div class="slds-var-m-around_medium">
+            <lightning-button label="get childs data" onclick={clickhandler}></lightning-button>
+           <div>parent section</div>
+           <c-parentchild2   recievedataonclick ={datatopassonbuttonclick}></c-parentchild2>
+        </div>
+    </lightning-card> -->
+     <!-- <lightning-card title="calling parent method from parent ">
+       <div class="slds-p-around_medium">
+         <div>{data}</div>
+        <c-parentchild2 onchildmethod={childmethodcallingmethod}></c-parentchild2>
+      </div>
+    </lightning-card> -->
+    <!-- <lightning-card title="calling parent method from parent ">
+        <div class="slds-p-around_medium">
+              <lightning-button  label="child to envoke child method"  onclick={childmethodcallingmethod}></lightning-button>
+         <c-parentchild2 ></c-parentchild2>
+       </div>
+     </lightning-card> -->
+
+     <lightning-card title="calling parent method from parent ">
+      <div class="slds-p-around_medium">
+       <c-parentchild2 onchildmethodcall={childmethodcallingmethod} ></c-parentchild2>
+     </div>
+   </lightning-card>
+    </template>

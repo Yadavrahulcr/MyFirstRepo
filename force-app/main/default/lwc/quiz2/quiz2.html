@@ -1,0 +1,55 @@
+<template>
+
+    <lightning-card title=" Another Quiz">
+        <div class="slds-m-around_large">
+            <template if:true= {issubmitted}>
+                <div class={markbasedcolorchange}>number correct answer {correctAns}  !! {comments}</div>
+                <!-- since we want to take input from the user we have to use form tag -->
+
+            </template>
+
+            
+          <form >
+               <template  for:each={newTest} for:item="qz">
+                 <div key={qz.id} class="slds-p-around_medium">   
+                      <!-- we wish to itterate all the all element to with respect to this key so we must wrap all the element within the key -->
+                     <div><strong> {qz.id}-{qz.QUESTION}</strong></div>
+                     <!-- <input type="radio" key={qz.id} onchange={changeHandler} > -->
+                     <!-- by adding this line we will get single radio button with each question  hence we will comment above line and go with the grid  -->
+                     <!-- now we add a grid -->
+                     <div class="slds-grid slds-gutters slds-m-bottom_medium" >
+                            <div class="slds-col">
+                               <input type="radio" name={qz.id} value="a" onchange={changehandler} class="slds-p-right_large ">
+                                  {qz.Answer.a}
+                            </div>
+                            <div class="slds-col">
+                                <input type="radio" name={qz.id} value="b" onchange={changehandler} class="slds-p-right_large ">
+                                   {qz.Answer.b}
+                            </div>
+                            <div class="slds-col">
+                                <input type="radio" name={qz.id} value="c" onchange={changehandler} class="slds-p-right_large ">
+                                   {qz.Answer.c}
+                            </div>
+                        </div>
+
+               
+                    </div>
+             
+                </template>
+                <lightning-button variant="brand" 
+                label="submit" title="submit test" type="submit" 
+                onclick={submithandaler} disabled={allnotselected}
+                class="slds-m-around_x-large"></lightning-button>
+
+                <lightning-button variant="brand" 
+                label="reset" title="reset test" type="reset" 
+                onclick={resethandaler} 
+                class="slds-m-around_x-large"></lightning-button>
+
+
+
+            </form>
+         </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,82 @@
+<template>
+<lightning-card icon-name="standard:account" variant="base">
+  <div class="slds-var-p-around_medium">
+   <!-- <template lwc:if={method.data}>
+   <template for:each={method.data} for:item="Account">
+    <div class="slds-box slds-box_xx-small" key={Account.Id}>
+
+        <div>industury{Account.Industry}</div>
+    </div>
+   
+   </template>
+</template> -->
+<!-- <template lwc:if={conlist.data}>
+ <template for:each={conlist.data} for:item="Contact">
+     <div class="slds-box slds-box_xx-small" key={Contact.Id}>
+        <div> name{Contact.LastName}</div>
+
+     </div>
+
+ </template> -->
+
+<!-- </template>
+     -->
+<!-- <div> apex with params</div>
+
+
+<lightning-combobox
+name="industry type"
+label="choose"
+value={selectedindustry}
+options={indoption}
+onchange={changehand}>
+</lightning-combobox>
+ 
+
+     </div>
+
+ </template> 
+
+</template> -->
+
+
+<div> apex imperative call </div>
+
+<!-- <lightning-button label="Get Apex Data" onclick={handleclick}> -->
+
+<!-- </lightning-button>
+ <template lwc:if={accouts}>
+ <template for:each={accouts} for:item="account">
+     <div class="slds-box slds-box_xx-small" key={account.Id}>
+        <div> {account.Name}</div>
+
+
+       
+     </div>
+
+ </template> 
+
+</template> -->
+
+<div> imperative method with params</div>
+<lightning-input
+type="search"
+onchange= {searchh}
+lable="seach"
+value= {searchkey}>
+</lightning-input>
+
+
+<template lwc:if={accouts}>
+    <template for:each={accouts} for:item="account">
+        <div class="slds-box slds-box_xx-small" key={account.id}>
+           <div> {account.Name}</div>
+        </div>
+        </template>
+    </template>
+
+
+
+  </div>
+</lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="impliment validation ">
+        <div class="slds-m-around_medium">
+            <lightning-input label="enter a valid date" placeholder="enter date" class='date' type="date" lwc:ref="datefield" ></lightning-input>
+            <lightning-input label="enter name" placeholder="name" type="text" class="name" lwc:ref="namefield" ></lightning-input>
+            <lightning-button  class="slds-p-top_xx-large" label ='submit' variant = "brand"  onclick={clickhandler}></lightning-button>
+            <!-- <lightning-button variant="brand" label="Brand" title="Save" onclick={handleClick} class="slds-m-left_x-small"></lightning-button> -->
+            <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+
+        </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <div if:true={showinput1}>
+        <lightning-input type="search" name="input1" label="Enter a date" onchange={changehandler} ></lightning-input>
+        <!--type in (date, datetime, time, color, file,
+                     text, email, password, tel, url, number,
+                     checkbox, checkbox-button, toggle, search)-->
+    </div>
+    
+    <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange}
+            onfocus={showinput}
+            onblur={hideinput}>
+            
+        </lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+</template>

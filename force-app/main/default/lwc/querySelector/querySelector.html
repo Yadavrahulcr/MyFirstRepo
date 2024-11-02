@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+         <h1> hey this is an text in the html </h1>
+         <template for:each={name} for:item="nameofuser">
+            <div class="names" key = {nameofuser}>
+                {nameofuser}
+            </div>
+         </template>
+
+            <div  class="child"  lwc:dom ='manual'>
+
+            </div>
+         <button onclick= {fetchhtml}>
+            click me
+         </button>
+        
+        </div> 
+    </lightning-card>
+    
+</template>

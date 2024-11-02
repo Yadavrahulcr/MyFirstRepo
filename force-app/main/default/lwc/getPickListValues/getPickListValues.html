@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="get picklist values">
+        <div class="slds-var-m-around_medium">
+          picklistvalues will come here 
+          
+          
+            <lightning-combobox
+                    name="Industry"
+                    label="Industry  "
+                    value={selectedIndustry}
+                    placeholder="select selectedIndustry"
+                    options={industryOptions}
+                    onchange={handleChange} ></lightning-combobox>
+        
+            <p>Selected value is: {selectedIndustry}</p>
+        
+        </div>
+    </lightning-card>
+</template>

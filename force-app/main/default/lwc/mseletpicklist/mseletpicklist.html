@@ -1,0 +1,28 @@
+<template>
+
+    
+        <lightning-card>
+            <div class="slds-p-horizontal_small">
+                <c-reuseablemultiselectpicklist label="Industry" required="false" showpills="true" role="cm-picklist"></c-reuseablemultiselectpicklist>
+            </div>
+            <div class="slds-align_absolute-center slds-p-top_large">
+                <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+            </div>
+
+            <lightning-button variant="brand" label="showoption" title="Save" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            {testArray }
+            {option}
+            <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+
+            <lightning-combobox
+                   name="progress"
+                   label="Status"
+                   value={value}
+                   placeholder="Select Progress"
+                   options={option}
+                   onchange={handleChange}>
+            </lightning-combobox>
+        </lightning-card>
+    
+    
+</template>

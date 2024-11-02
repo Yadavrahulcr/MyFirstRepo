@@ -1,0 +1,13 @@
+<!-- sldsValidatorIgnore -->
+<template >
+    <lightning-card  title=" infintie loading ">
+          <div style="height:500px;">
+        <lightning-datatable
+            key-field=id
+            data={accounts}
+            columns={columns}  enable-infinite-loading={enableinfineloading} onloadmore ={loadmorehandler}>       
+        </lightning-datatable> 
+            </div>
+    </lightning-card>
+  
+</template>

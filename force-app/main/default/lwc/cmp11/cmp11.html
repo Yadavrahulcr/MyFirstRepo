@@ -1,0 +1,17 @@
+<template>
+    <div class="slds box ">
+        <lightning-card>
+
+            <h1>parent</h1>
+            <!-- case1 parent to child communicatin -->
+             <!-- case1 Passing the childs from parent  -->
+              <lightning-button label="clickme" onclick={hitchildmethod}  ></lightning-button>
+            
+
+            <c-cmp12 prop1 = 'test ' onnotifyparent={funcparent} oncheak={cheakformchild} ></c-cmp12>
+
+        </lightning-card>
+     
+
+    </div>
+</template>

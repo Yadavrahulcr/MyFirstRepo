@@ -1,0 +1,75 @@
+<template>
+    <lightning-card title='parent to child communication premitive data only  ( simple data embaded in parent component )'>
+
+        <div class = 'slds-m-around_medium'>
+            <div>this is a massage is showing upo coz child element is embaded in parent component </div>
+
+             <c-childallertcomp></c-childallertcomp>
+        </div>
+        
+            
+    </lightning-card>
+    
+     
+    <lightning-card title= 'parentaaa to child communication premitive data only'>
+
+    <div class = 'slds-m-around_medium'>
+        <div>this is a massage will defined in the html of the parent component  then called back parent component </div>
+
+         <c-childallertcomp  massages = " i am massage created in the parent i will display via child component"
+         card-heading ='parent to child communication premitive data only'
+         num=200
+         is-valid=false
+         ></c-childallertcomp>
+
+         <!-- for complex  data -->
+         <div class='slds-m-bottom_medium'>
+        </div>
+        <c-childc carousal-details={carousaldd}></c-childc>
+
+
+
+        
+    </div>
+    
+        
+</lightning-card>
+
+<div class='slds-m-around_medium'></div>
+<lightning-card title='parent to child  on an action '>
+  <div class='slds-m-around_medium'>
+    <lightning-input 
+                  type="number" 
+                  name="percent" 
+                  label="percentage" 
+                  onkeyup={handler}
+                
+                   
+                   
+                   
+                ></lightning-input>
+   <c-childc percent = {percentage}></c-childc>
+
+
+    
+
+
+
+  </div>
+
+</lightning-card>
+
+<!-- calling child method from parent -->
+
+<div class='slds-m-bottom_medium'></div>
+<lightning-card title='calling a child method from parent'>
+<div class = 'slds-m-around_medium'></div>
+<c-parent2child-methodcom></c-parent2child-methodcom>
+<lightning-button 
+      variant="brand"
+      label="reset" 
+      onclick={handleClick11} 
+    ></lightning-button>
+</lightning-card>
+
+</template>

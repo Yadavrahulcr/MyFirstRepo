@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Editable Data Table">
+        <div class="slds-m-around_medium">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={data} for:item="item">
+                        <tr key={item.id}>
+                            <td>{item.name}</td>
+                            <td>{item.age}</td>
+                            <td class="editable-cell">
+                                <template if:true={item.isEditingEmail}>
+                                    <lightning-input 
+                                        type="email" 
+                                        value={item.email} 
+                                        data-id={item.id} 
+                                        onchange={handleEmailChange}
+                                        class="email-input">
+                                    </lightning-input>
+                                </template>
+                                <template if:false={item.isEditingEmail}>
+                                    <span>{item.email}</span>
+                                    <lightning-icon 
+                                        icon-name="utility:edit" 
+                                        alternative-text="Edit" 
+                                        size="small" 
+                                        data-id={item.id} 
+                                        onclick={toggleEditEmail}
+                                        class="edit-icon">
+                                    </lightning-icon>
+                                </template>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

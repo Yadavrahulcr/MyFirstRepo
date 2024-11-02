@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>c1c2messageChannelfdfghgg</masterLabel>
+    <isExposed>true</isExposed>
+    <description>This is a sample Lightning Message Channel which will for use for the communication between c1,c2.</description>
+    <lightningMessageFields>
+        <fieldName>valueFromInputFromC1</fieldName>
+        <description>This is the value which will come from the input field</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>recordData</fieldName>
+        <description>The current data representing the record that changed</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

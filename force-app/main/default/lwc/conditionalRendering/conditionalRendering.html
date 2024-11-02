@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="conditional rendering">
+       <div class="slds-m-around_medium">
+          <lightning-button variant="brand" label="show data" onclick={showdata}></lightning-button>
+          <span class="slds-p-left_xxx-small">
+              <lightning-button variant="neutral" label="hide data" onclick={hidedata} ></lightning-button>
+            </span>
+            <template lwc:if={showdataa}>
+                <div>{data}</div>
+            </template>
+            <template lwc:elseif={hidedataa}>
+            </template>    
+<template lwc:else>
+    <div>
+        <strong style="font-size: larger ;color :blue;">Select your options  </strong>
+    </div>
+</template>
+   </div>
+</lightning-card>
+</template>

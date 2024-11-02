@@ -1,0 +1,36 @@
+<template>
+    <lightning-card  title="Dynamic Lead Table">
+        <lightning-button label="Modify Columns" slot="actions" onclick={showColumnSelectionWindow}></lightning-button>
+        <p class="slds-p-horizontal_small">
+            <lightning-datatable key-field="Id" data={objectData} columns={fieldsForCloumns}>
+            </lightning-datatable>
+        </p>
+    </lightning-card>
+
+    <template if:true={iscolumnWindow}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+              <header class="slds-modal__header">
+                <div class="slds-text-heading_large">Select Column for Data Table</div>
+              </header>
+              <div class="slds-modal__content slds-p-around_medium">
+                <lightning-dual-listbox name="fieldSelection"
+                            label="Select Fields (at least 5 and at most 10)"
+                            source-label="Available Fields"
+                            selected-label="Selected Field"
+                            field-level-help="Select fields which you want to see in data table."
+                            options={allFields}
+                            min={minField}
+                            max={maxField}
+                            value={allSelectedField}
+                            onchange={updateSelectedColumns}></lightning-dual-listbox>
+              </div>
+              <footer class="slds-modal__footer">
+                <lightning-button name="cancelAction" class="slds-p-around_x-small" label="Cancel" onclick={closeModel}></lightning-button>
+                <lightning-button name="saveAction"  class="slds-p-around_x-small" label="Save" onclick={closeModel} variant="brand"></lightning-button>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

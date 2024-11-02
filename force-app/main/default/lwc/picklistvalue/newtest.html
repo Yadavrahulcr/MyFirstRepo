@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      background-color: #004080; / Dark blue background /
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .user-icon {
+      background-color: #007bff; / Blue circle /
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .user-icon i {
+      font-size: 48px;
+      color: white;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    input[type="password"] {
+      width: 250px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .bottom-options {
+      margin-top: 40px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .bottom-options button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .bottom-options button:hover {
+      background-color: #0056b3;
+    }
+
+    .bottom-options .user-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .bottom-options .user-icon i {
+      font-size: 24px;
+    }
+
+    .bottom-icons {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .bottom-icons i {
+      font-size: 24px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="user-icon">
+      <i class="fas fa-user"></i>
+    </div>
+    <h1>Bharat Khatri</h1>
+    <input type="password" placeholder="Password">
+    <button>Sign In</button>
+    <div class="bottom-options">
+      <button>
+        <div class="user-icon">
+          <i class="fas fa-user"></i>
+        </div>
+        Bharat Khatri
+      </button>
+      <button>
+        <div class="user-icon">
+          <i class="fas fa-user"></i>
+        </div>
+        Other user
+      </button>
+    </div>
+  </div>
+
+  <div class="bottom-icons">
+    <i class="fas fa-desktop"></i>
+    <i class="fas fa-redo"></i>
+    <i class="fas fa-power-off"></i>
+  </div>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<template>
+  <lightning-card title="getter" >
+    <div class="slds-m-around_medium">
+        <div>{issib}</div>
+    </div>
+  </lightning-card>
+  <div class="slds-m-bottom_large"></div>
+  <lightning-card title="type 2 getter">
+        <div class="slds-m-around_medium">
+        <lightning-input label="the number you want to add to 20 " onkeyup={numhandler}> </lightning-input>
+        <div>the sum of the number 20 and {num2} is {sum} </div>
+
+        <div style="color: red;"> // please note that its not working  as expected dynamically its works well when we are passing static data</div>
+        <div style="color: red;">use it with set method when required </div>
+        
+    </div>
+  </lightning-card>
+</template>

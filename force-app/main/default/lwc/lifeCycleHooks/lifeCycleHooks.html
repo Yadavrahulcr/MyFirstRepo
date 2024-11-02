@@ -1,0 +1,39 @@
+<template>
+<lightning-card title = ' (lifecycle  hook parent constuctor) @ mounting phase  '>    
+    <div class = 'slds-m-around_medium'>
+        
+
+         <!-- // this code is just for the removing test disconnected call back -->
+          <template if:false ={show}>
+            <lightning-button
+            variant ='brand'
+            label= 'show  child'
+            title = 'show child'
+            onclick = {handleclick}
+            class='slds-m-left_x-small'></lightning-button>
+            
+        
+        </template>
+
+        <template if:true ={show}>
+            <lightning-button
+            variant ='brand'
+            label= 'hide  child'
+            title = 'hide child'
+            onclick = {handleclick}
+            class='slds-m-left_x-small'></lightning-button>
+   
+            
+        
+        </template>
+        <template if:true ={show}>
+           
+   
+          <c-life-cycle-child></c-life-cycle-child>
+            
+        
+        </template>
+       
+    </div>
+</lightning-card >
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <div class="picklist-container">
+        <lightning-combobox
+            name="progress"
+            label="Progress"
+            multiple
+            value={value}
+            placeholder="Select an option"
+            options={options}
+            onchange={handleChange}
+            class="custom-combobox">
+        </lightning-combobox>
+        <div class="selected-values">
+            Selected Values: {value}
+        </div>
+    </div>
+</template>

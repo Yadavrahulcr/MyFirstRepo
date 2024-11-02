@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title='signup'>
+        <div class = 'slds-m-around_medium'>
+
+            <lightning-input 
+            type="text"
+            label="interest"
+          ></lightning-input>
+          <lightning-input 
+          type="text"
+          label="gende"
+        ></lightning-input>
+        <lightning-input 
+          type="email"
+          label="email address"
+          class = "slds-m-bottom_large"
+        ></lightning-input>
+ 
+        <lightning-button 
+               variant="brand"
+               label="back"
+               title='back' 
+               onclick={handleClick} 
+               class='slds-m-left_x-small'
+             ></lightning-button>
+              <lightning-button 
+                variant="destructive"
+                label="signup"
+                title="signup" 
+                onclick={sucessclick} 
+                class='slds-m-left_small'
+              ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

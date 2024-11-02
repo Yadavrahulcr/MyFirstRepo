@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="user permission cheak njkkklgggggggggg">
+        <div class="slds-m-around_medium">
+            <template if:true={hassPermissionViewAll}>
+                <p> hurray !!  the user has permission aya </p>
+
+            </template>
+            <template if:false={hassPermissionViewAll}>
+                <p> opps !!  the user has no  permission </p>
+
+            </template>
+        </div>
+    </lightning-card>
+</template>

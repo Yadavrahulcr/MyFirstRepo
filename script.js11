@@ -1,0 +1,55 @@
+console.log('cheak');
+let counter = 0; // Use 'let' to declare the variable
+
+const logCounter = () => { 
+   // console.log(counter); 
+};
+
+logCounter(); // Logs the initial value of counter
+
+setTimeout(logCounter, 1100); // Corrected typo 'logCOunter' to 'logCounter'
+
+setInterval(() => {
+    counter++; // Increment the counter correctly
+    logCounter(); // Log the updated counter value
+}, 1000);
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    const input = document.querySelector('input');
+    console.log(input.getAttribute('value'));
+    console.log(input.value);
+
+    
+
+
+});
+
+const toNumber = (strOrNum) => strOrNum;
+ console.assert(Number.isNaN(toNumber()));
+ console.assert(toNumber() === NaN);
+ console.assert(toNumber('2') === 2);
+ console.assert(toNumber('-3') < 0);
+  console.log('e');
+
+function changeValue(param) {
+  param = 5; // param is a local variable
+}
+
+let a = 10;
+let b = 5;
+changeValue(b);
+
+const result = a + " - " + b; // b is still 5, as changeValue did not affect it
+console.log(result); // Output: "10 - 5"
+//const copy = JSON.stringify([ new String(‘ false ’), new Bollean( false ), undefined ]);
+const copy = JSON.stringify([new String('false'), new Boolean(false), undefined]);
+console.log(copy); // Output: ["false",false,null]
+
+let sayHello=()=>{
+    console.log('Hello world');
+}
+setTimeout(sayHello,12000)
+
+console.log(ch)

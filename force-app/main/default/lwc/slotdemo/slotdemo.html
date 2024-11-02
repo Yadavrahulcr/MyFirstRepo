@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="slot demo">
+        <div class="slds-m-around_medium">
+            <c-slot-demo-child>
+                <p class="slds-text-color_success">my name is rahul and this data is sent from the html  through slot</p>
+                <p class= "slds-text-color_error">young enough to do any miracle </p>
+                <!-- here we observed that the data is not getting bellow the right question -->
+                <!-- so we will create named slot  -->
+                <p class="slds-text-color_success" slot="name">my name is rahul and this data is sent from the html  through slot</p>
+                <p class= "slds-text-color_error" slot="age">young enough to do any miracle </p>    
+                <p slot="footer"> i am footer </p>
+            </c-slot-demo-child>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <c-slot-demo-child>
+                <p class="slds-text-color_success">my name is rahul and this data is sent from the html  through slot</p>
+                <p class= "slds-text-color_error">young enough to do any miracle </p>
+                <!-- here we observed that the data is not getting bellow the right question -->
+                <!-- so we will create named slot  -->
+                <p class="slds-text-color_success" slot="name">my name is rahul and this data is sent from the html  through slot</p>
+                <p class= "slds-text-color_error" slot="age">young enough to do any miracle </p>    
+                <!-- <p slot="footer"> i am footer </p> -->
+            </c-slot-demo-child>
+        </div>
+    </lightning-card>
+    
+</template>

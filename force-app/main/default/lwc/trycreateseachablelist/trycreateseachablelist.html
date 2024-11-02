@@ -1,0 +1,46 @@
+<template>
+    <lightning-input type="search" name="input1" value = {valuuee} label="Enter a date" onfocus={cheakhandler} ></lightning-input>
+   <div
+   if:true={showlist}
+                    class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                    role="listbox"
+   
+   >
+   
+  
+    <ul class="slds-listbox slds-listbox_vertical" role="presentation"
+    >
+        <li   
+        role="presentation"  
+        onclick={selectSearchResult} 
+        class="slds-listbox__item"
+         data-value='Coffee'
+        >Coffee</li>
+      
+        <li   
+        role="presentation"  
+        onclick={selectSearchResult} 
+        class="slds-listbox__item"
+        data-value='tea' 
+        
+        >tea</li>
+        
+        <li   
+        role="presentation"  
+        onclick={selectSearchResult} 
+        class="slds-listbox__item"
+        data-value='milk' 
+        
+        >milk</li>
+      </ul>
+
+    </div>
+    <lightning-combobox
+           name="progress"
+           label="Status"
+           value={value}
+           placeholder="Select Progress"
+           options={options}
+           onchange={handleChange}>
+    </lightning-combobox>
+</template>

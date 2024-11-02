@@ -1,0 +1,19 @@
+<template>
+ <lightning-card title="getObjectInfos wire adapter as function">
+    <div class="slds-var-m-around_medium">
+        <template lwc:if={objsdata}>
+            <template for:each={objsdata} for:item="obj">
+                <div key={obj.result.apiName}> 
+                 <div>object-api-name-- {obj.result.apiName}</div>
+                <div>object-api-name--{obj.result.defaultRecordTypeId}</div>
+            </div>
+            </template>  
+            <!-- <div>object-api-name-- {objsdata.result.apiName}</div> -->
+            <!-- the above line would have worked if the recieved data is in form of an object but if it is 
+             in the form of the array we can only run loop to show data on the html -->
+        </template>
+        
+
+    </div>
+ </lightning-card>   
+</template>

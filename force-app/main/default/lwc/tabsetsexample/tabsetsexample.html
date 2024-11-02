@@ -1,0 +1,25 @@
+<!-- <template>
+    <lightning-tabset onactive={handleActive}>
+        <lightning-tab label="Item One" value="1">
+            <template if:true={isTabActive}>
+                <c-server-side-pagination-with-datatable></c-server-side-pagination-with-datatable>
+            </template>
+        </lightning-tab>
+        <lightning-tab label="Item Two" value="2">
+            <template if:true={isTabActive}>
+                <c-servicesidepagination></c-servicesidepagination>
+            </template>
+        </lightning-tab>
+    </lightning-tabset>
+</template> -->
+
+<template>
+    <lightning-tabset>
+        <lightning-tab label="Item One" value="1" >
+            <c-server-side-pagination-with-datatable></c-server-side-pagination-with-datatable>
+        </lightning-tab>
+        <lightning-tab label="Item Two" value="2" > 
+            <c-servicesidepagination></c-servicesidepagination>
+        </lightning-tab>
+    </lightning-tabset>
+</template>

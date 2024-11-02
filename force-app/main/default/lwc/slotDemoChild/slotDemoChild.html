@@ -1,0 +1,19 @@
+<template>
+    <div>what is your name ??</div>
+    <div><slot></slot></div>  <!-- this is unnamed slot -->
+    <div> what is your age ? </div>
+    <div><slot></slot></div>
+    <!-- here we wish to to catch data in bellow slots we have to give name similer to the slot name given in actul flile ie. in this cause is slotdemo.html -->
+
+    <h1> <strong>named slot</strong> </h1>
+<div class="slds-m-bottom_large"></div>
+    <div>what is your name ??</div>
+    <div><slot name="name"> </slot></div>  <!-- this is named slot -->
+    <div > what is your age ? </div>
+    <div><slot name="age"></slot></div>
+    <footer class="slds-card__footer slds-hide">
+        <slot name="footer" onslotchange={footerchange}></slot>
+    </footer>
+    
+
+</template>

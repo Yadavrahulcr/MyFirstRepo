@@ -1,0 +1,33 @@
+<template>
+
+    <lightning-card title="getObjectInfo wire adapter demo with wire as function ">
+
+
+        <div class="slds-var-m-around_medium">
+            <div>
+ the above adaptar is used to get matadata about a specific Object .The 
+ response include metadata describing the object's fields ,child relationship, 
+ record type and the theme 
+            </div>
+        <template lwc:if={DefaultRecordTypeId}>
+                <div><strong>objectId--</strong>{DefaultRecordTypeId}</div>
+                <div><strong>object-api-name --</strong>{objectapiName}</div>
+    
+            </template>
+            
+
+        </div>
+    </lightning-card>
+    
+    <lightning-card title="getObjectInfo wire adapter demo with wire as property ">
+        <div class="slds-var-m-around_medium">
+        <template lwc:if={accountObjectInfoProperty.data}>
+                <div><strong>objectId--</strong>{accountObjectInfoProperty.data.defaultRecordTypeId}</div>
+                <div><strong>object-api-name --</strong>{accountObjectInfoProperty.data.apiName}</div>
+    
+            </template>
+            
+
+        </div>
+    </lightning-card>
+</template>

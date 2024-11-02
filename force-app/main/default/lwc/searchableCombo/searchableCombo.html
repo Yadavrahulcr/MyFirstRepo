@@ -1,0 +1,19 @@
+<template>
+    <lightning-combobox
+        name="progress"
+        label="Progress"
+        value={value}
+        options={filteredOptions}
+        onchange={handleChange}>
+    </lightning-combobox>
+
+    <template if:true={showinput}>
+        <lightning-input
+            type="text"
+            label="Search"
+            onchange={handleInputChange}>
+        </lightning-input>
+    </template>
+
+    <lightning-button label="Show Input" onclick={toggleInput}></lightning-button>
+</template>

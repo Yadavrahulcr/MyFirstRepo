@@ -1,0 +1,27 @@
+.picklist-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #d8dde6;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f4f6f9;
+}
+
+.custom-combobox {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.selected-values {
+    font-weight: bold;
+    color: #333;
+    background: #e3e6f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.selected-values::before {
+    content: '✔ ';
+    color: #0070d2;
+}

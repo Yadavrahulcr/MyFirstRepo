@@ -1,0 +1,68 @@
+<template>
+    <lightning-card title="lightening record form ">
+        <div class="slds-var-m-around_medium">
+          <lightning-record-form 
+          object-api-name={objectApiName}
+          fields={fieldList}
+
+          
+          onsuccess={onsucesshandler}>
+        </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="lightening record form in view mode ">
+        <div class="slds-var-m-around_medium">
+          <lightning-record-form 
+          record-id={recordId}
+          object-api-name={objectApiName}
+          fields={fieldList}
+        ></lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="lightening record form in read only   mode ">
+        <div class="slds-var-m-around_medium">
+          <lightning-record-form 
+          record-id={recordId}
+          object-api-name={objectApiName}
+          fields={fieldList}
+          mode="readonly"
+        ></lightning-record-form>
+        </div>
+    </lightning-card>
+    
+   <lightning-card title="lightening record form in edit mode ">
+        <div class="slds-var-m-around_medium">
+          <lightning-record-form 
+          record-id={recordId}
+          object-api-name={objectApiName}
+          fields={fieldList}
+          mode="edit"
+          columns="2"
+        ></lightning-record-form>
+        </div>
+    </lightning-card>     
+    <!-- <lightning-card title="lightening record form in edit mode ">
+        <div class="slds-var-m-around_medium">
+          <lightning-record-form 
+          record-id={recordId}
+          object-api-name={objectApiName}
+
+          mode="edit"
+          columns="2"
+          layout-type="full"
+        ></lightning-record-form>
+        </div>
+    </lightning-card>      -->
+
+    <!-- not working because layouts are not found  -->
+   
+   
+        
+  
+   
+
+
+    
+</template>

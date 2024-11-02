@@ -1,0 +1,18 @@
+div{
+    color:red;
+    border: 3px solid black;
+}
+
+.externalCss{
+ color: black;
+ font-weight: 600;
+ text-align:  center;
+ background-color: green;
+
+ border: 4px solid red;
+} 
+.externalCss:hover{
+
+    font-size: 555 px ;
+    color: brown;
+}

@@ -1,0 +1,45 @@
+<template>
+<lightning-card title="apex in lwc without wire (imparitave apexcall)">
+    <div class="slds-var-m-around_medium">
+         <!-- <lightning-input  label="Select Name to Search" type="search" value={keye} onchange={inputdasler}>
+
+         </lightning-input>
+         <template lwc:if={accounts}>
+         <template for:each={accounts} for:item="Account">
+            <div class="slds-box slds-box_xx-small" key={Account.Id}>
+                <div>NAME-{Account.Name}</div>
+                <div>NAME-{Account.Industry}</div>
+            </div>
+         </template>
+         </template> -->
+
+
+
+        <lightning-input  label="Select Name to Search" type="search" value={keye} onchange={inputdasler}></lightning-input>
+         <template lwc:if={accounts}>
+            <lightning-datatable
+            key-field="Id"
+            data={accounts}
+            columns={columns}
+            hide-checkbox-column="true">
+        </lightning-datatable>
+         
+         </template> 
+
+
+         <div>----------------------------------------------------------------</div>
+
+         <lightning-datatable
+         key-field="name"
+         data={faimly}
+         columns={col}
+         hide-checkbox-column="true">
+     </lightning-datatable>
+
+
+
+
+    </div>
+</lightning-card>
+    
+</template>

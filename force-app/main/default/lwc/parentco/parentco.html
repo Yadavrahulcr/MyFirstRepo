@@ -1,0 +1,34 @@
+<template>
+<lightning-card title='parent to child communication '>
+    <div class='slds-var-m-around_medium'>
+        <!-- lets compose child in parent -->
+        <!-- in order pass a propery to child u must first make that property public by using @api in the js file of 
+        of the parent  -->
+        <div>i am parent</div>
+        <c-pchildco message={message}  num=20   card-heading='parent to child simple data communication'></c-pchildco>  
+        <!-- the property will be omly availble in child tag -->
+    </div>
+</lightning-card>    
+    <lightning-card title="parent to child  non primitive data types">
+        <div class="slds-var-m-around_medium">
+            <c-p2cnonprimitive carousaldata={objectData} ></c-p2cnonprimitive>
+        </div>
+    </lightning-card>
+    <lightning-card title="pasing data from parnt to child component on action at parent component ">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="number" label="enter percentage" onchange={percentage}></lightning-input>
+          
+
+          <c-p2c-on-action-at-prnt val={percentagevalue}></c-p2c-on-action-at-prnt>
+        </div>
+    </lightning-card>
+    <lightning-card title="parent2child via method">
+        <div class="slds-var-m-around_medium">
+            <lightning-button label="reset" variant="brand" onclick={clickhandler} ></lightning-button>
+            <c-p2c-via-method></c-p2c-via-method>
+        </div>
+    </lightning-card>
+
+
+
+</template>

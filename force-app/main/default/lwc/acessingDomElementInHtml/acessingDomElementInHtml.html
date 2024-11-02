@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Accessing dom element in js file ">
+        <div class="slds-var-m-around_medium">
+            <lightning-button label='show data' onclick={clickhandler}></lightning-button>
+            <h1> hi this is mogali </h1>
+            <template for:each={mankuj} for:item="mankubeta"> 
+                <!-- // here for item expect a name of each item -->
+                <!-- here for item is important because it gives a calling name for each item 
+                without which it not possible to display  the items in the list  -->
+                    <div class="mankudetails" key={mankubeta}>{mankubeta}</div>
+                
+                </template>
+
+                <template for:each={faimly} for:item="name">
+                    <div class="fam" key={name.name}> {name.name}
+                     +'----'+{name.age} </div>
+                </template>
+
+
+               <!-- lwc dom manual-->
+
+               <!-- with the help of lwc:dom manual we can add a tag value progamatically  -->
+                   <div class="child" lwc:dom="manual"> </div>
+        </div>
+      </lightning-card>
+    </template>

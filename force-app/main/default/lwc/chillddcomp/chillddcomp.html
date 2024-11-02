@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="child component">
+        <div class="slds-m-around_medium">
+
+            child component 
+            {name}
+            {valuefrommethod}
+            <div if:true={detailsfromparent}>
+            <template for:each={detailsfromparent} for:item='item'>
+                <div key={item.name}>
+                  <div><strong>Name</strong>- {item.name}</div>
+
+                </div>
+            </template>
+
+            <!-- <div class="myProgress">
+                <div class="myBar" style={getStyle}>{percentage}</div>
+            </div> -->
+
+            <!-- <lightning-button label="clickpasstoparent" varient></lightning-button> -->
+             <c-grandchild  grandchildproperty ={transproety}></c-grandchild>
+            
+
+
+            </div>
+
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,28 @@
+<template>
+  <lightning-card title="Navigate to Object Page" >
+    <div class="slds-var-m-around_meduim">
+
+        <div><strong>navigation to account </strong></div>
+        <lightning-button label="Navigate to accounts" variant='brand' onclick={navigateToAccount}></lightning-button>
+        <div><strong>navigation to files </strong></div>
+
+        <lightning-button label="Navigate to files" variant ='neutral' onclick={navigateTofiles}></lightning-button>
+        <div><strong>navigation to account with field values  </strong></div>
+
+        <lightning-button label="Navegate To New Record with default value" variant="success" onclick={navigateToNewRecordwithdefaultvalue}></lightning-button>
+
+        <div><strong>navigation to list value </strong></div>
+
+        <lightning-button label="Navigate to list value" variant='brand' onclick={navigateToList}></lightning-button>
+
+        <div><strong>Navigation to Relation list</strong></div>
+
+        <lightning-button label="Navigate to Relation list" variant='brand' onclick={navigateToRelatedlist}></lightning-button>
+        
+        
+
+
+    </div>
+  </lightning-card>
+    
+</template>

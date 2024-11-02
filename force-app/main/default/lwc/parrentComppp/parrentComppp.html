@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="parent comp">
+        <div class="slds-m-around_medium">
+
+            this is parent comp 
+            <lightning-button label="hit Childs Methods" onclick={hitchildsmethod} variant="brand" ></lightning-button>
+           
+            <c-chillddcomp name={myname}   
+            transproety="value from parent"
+            
+            detailsfromparent = {userDetails}  oncheakevent={eventfromchild}   ondirectevent={directevent}  ongcevent={gcmethod}>   </c-chillddcomp>
+        </div>
+    </lightning-card>
+</template>

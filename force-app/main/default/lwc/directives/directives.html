@@ -1,0 +1,78 @@
+<template>
+    <lightning-card  title="directives">
+        <div class="slds-m-around_small">
+
+        <lightning-button variant="brand" 
+        label="clik here to show the text  " 
+        title=" consitional rendering" 
+        onclick={handleClick}
+         class="slds-m-left_x-small"></lightning-button>
+
+        <template if:true = {isvivible}> 
+        
+        <div> here i am </div>
+
+        </template>
+        
+        
+        <template if:false = {isvivible}> 
+        
+            <div> click the button to see whats hidden  </div>
+    
+            </template>
+            
+            
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text"
+                 label="Enter password to see the magic"
+                 lightning:button  onclick={handleInputChange}>
+                 </lightning-input>
+            
+                
+                
+                
+
+
+
+
+
+
+            </div>
+         
+            
+               <template  if:true = {handleClicks}>
+                
+                    <div> its the majic of mahadev</div>
+
+                </template>
+            </div>
+   </lightning-card>
+
+<lightning-card  title="another example of conditioning randering ">
+
+         <div class="slds-m-around_x-small">
+       
+         <lightning-input type="text" 
+        label="type the tex to show the magic "
+         onkeyup = {handalechenges}></lightning-input>
+
+         <template if:true = {matcahchek}>
+
+            <div> har har mahadev </div>
+
+
+            
+           </template>
+
+
+
+
+         
+
+
+         </div>
+     
+        </lightning-card>
+
+
+</template>

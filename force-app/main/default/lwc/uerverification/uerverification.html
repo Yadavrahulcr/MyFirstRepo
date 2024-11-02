@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="User Registration" icon-name="utility:add_user">
+        <div class="slds-var-p-around_medium">
+            <lightning-input label="Username" value={username} onchange={handleUsernameChange}></lightning-input>
+            <lightning-input type="password" label="Password" value={password} onchange={handlePasswordChange}></lightning-input>
+            <lightning-input type="password" label="Confirm Password" value={confirmPassword} onchange={handleConfirmPasswordChange}></lightning-input>
+
+            <div class="slds-var-m-top_medium">
+                <lightning-button variant="brand" label="Register" onclick={handleRegistration}></lightning-button>
+            </div>
+              
+            
+            <template lwc:if={passmatch}>
+                <div class={textColorClass}>{promptText}</div>
+            </template>
+        
+        <template lwc:else>
+            <div class={passwordStrengthClass}>
+                Password Strength: {passwordStrengthMessage}
+             </div>
+        </template>
+
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title=" child to parent passing simple data" >
+        <div class="slds-var-m-around_medium" onclose={clickhand}>
+            <lightning-button 
+           variant="brand"
+           label="showdata" 
+           onclick={showmodalh} 
+           ></lightning-button>
+              <p>{message}</p>
+              {message}
+          <template lwc:if={showmodal}>
+         
+            <c-chtopcc ></c-chtopcc>
+          </template>
+        </div>
+    </lightning-card>
+</template>

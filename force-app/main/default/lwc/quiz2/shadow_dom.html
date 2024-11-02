@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shadow DOM </title>
+    <style>
+        div{
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    <DIV>HEY THIS IS RAHUL ON THE HTML </DIV>
+    <p id='host'> </p>
+    <!-- we just created a key  -->
+     <!-- now we dont wish to write a jawa scrpt page so we will write the script on html page only -->
+     <button onclick="fetchAll()">click me</button>
+     <script>
+         const x = document.querySelector("#host")
+         const shadowroot = x.attachShadow({mode:"open"})
+         shadowroot.innerHTML = '<div>  I AM Rambow </div>' 
+         function fetchAll(){
+            let tags = document.querySelectorAll("div")
+
+            console.log(tags)
+         }
+        
+     </script>
+     
+
+</body>
+</html>

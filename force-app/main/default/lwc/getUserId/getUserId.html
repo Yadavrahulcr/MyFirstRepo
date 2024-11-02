@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="how to get user id in the lwc">
+        <div class="slds-var-m-around_medium">
+            <div><strong>user id is - </strong>{userid}</div>
+            <div><strong>user GuestId is - </strong>{is_guest}</div>
+            <div>
+                import ID from '@salesforce/user/Id';
+                import IS_GUEST from '@salesforce/user/isGuest';
+                export default class GetUserId extends LightningElement {
+                userid=ID
+                is_guest =IS_GUEST
+            </div>
+        </div>
+    </lightning-card>
+</template>

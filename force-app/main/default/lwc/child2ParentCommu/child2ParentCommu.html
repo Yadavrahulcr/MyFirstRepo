@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="child to parrent communication using simple event ">
+    <div class="slds-m-around_medium">
+
+        <template if:true={showup}>
+
+            <c-child2parent-modal  onclose={closeclick}>
+             
+            </c-child2parent-modal>
+        </template>
+      <lightning-button 
+        variant="brand"
+        label="show modal" 
+        onclick={handleClick} 
+      ></lightning-button>
+
+
+    
+
+    </div>
+   
+    </lightning-card>
+    
+
+
+   <lightning-card  title="child to parent with event and data ">
+    <div class="slds-m-around_medium">
+        <template if:true={showup}>
+
+            <c-child2parent-modal  onclose={closeclick}>
+             
+            </c-child2parent-modal>
+        </template>
+      <lightning-button 
+        variant="brand"
+        label="show modal" 
+        onclick={handleClick} 
+      ></lightning-button>
+         <P>{msg}</P>
+
+
+
+
+        
+    </div>
+
+   </lightning-card>
+
+    
+</template>

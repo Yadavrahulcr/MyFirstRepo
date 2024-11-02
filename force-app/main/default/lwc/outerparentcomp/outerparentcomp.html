@@ -1,0 +1,40 @@
+<template>
+  <lightning-card title="this is parent component">
+    <div slds-m-around_medium>
+        <div>this content is from parent </div>
+
+        <div>{updatedvalue}</div>
+          
+         <lightning-button variant="brand" label="addvalue to child property" onclick={handleclick}></lightning-button>
+         <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+          <!-- <lightning-button variant></lightning-button> -->
+         <!-- variant in (Base, Neutral, Brand, Brand Outline, Destructive, Destructive Text, Success)-->
+        <!-- this how we compose the child in parent 
+        1. we have used cabbab causing in the composition 
+        2. no capitals allowed here 
+        3. number of times we use composition  , the same number of times the child is inserted into the parent componet 
+        4. within the same composition tag we can call multible variables of parent .
+        
+        
+
+        -->
+        <!-- <c-innerchildcomp childs-variable="this text is comming from the html of parent "></c-innerchildcomp> -->
+          
+        <template if true= {showmultiplecomposition} >
+        <c-innerchildcomp message="Indicates a dangerous or potentially negative action"></c-innerchildcomp>
+        <c-innerchildcomp class-name="success" message="Success! Indicates a successful or positive action.">
+        </c-innerchildcomp>
+        <c-innerchildcomp class-name="info" message="Info! Indicates a neutral informative change or action.">
+        </c-innerchildcomp>
+        <c-innerchildcomp class-name="warning" message="Warning! Indicates a warning that might need attention.">
+        </c-innerchildcomp>
+        <c-innerchildcomp  recieve-value-from-parent-js = {valuetochildscomp}></c-innerchildcomp>
+    </template>
+
+       <!-- lets try lwc:ref in communication  -->
+       <c-innerchildcomp lwc:ref='compB'></c-innerchildcomp>
+
+
+    </div>
+  </lightning-card>    
+</template>

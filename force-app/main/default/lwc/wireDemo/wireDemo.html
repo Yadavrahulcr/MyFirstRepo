@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="wire-demo wire as a function">
+      <div class="slds-var-m-around_medium">
+        <div><strong>USER-ID--</strong>{userId}</div>
+        <template lwc:if={userdetail}>
+          <div>Email--  {userdetail.Email.value}</div>
+         <div>Name-- {userdetail.Name.value}</div>
+        </template>
+        
+      </div>
+
+    </lightning-card>
+
+    <lightning-card title="wire-demo wire as a property">
+      <div class="slds-var-m-around_medium">
+        <div><strong>USER-ID--</strong>{userId}</div>
+        <template lwc:if={userDetailAsProprty.data}>
+          <div>Email--  {userDetailAsProprty.data.fields.Email.value}</div>
+         <div>Name-- {userDetailAsProprty.data.fields.Name.value}</div>
+        </template>
+        
+      </div>
+
+    </lightning-card>
+
+    <lightning-card title="wire-demo wire as a  reactive property ">
+      <div class="slds-var-m-around_medium">
+        <div><strong>USER-ID--</strong>{userId}</div>
+        <template lwc:if={userDetailAsProprty.data}>
+          <div>Email--  {userDetailAsProprty.data.fields.Email.value}</div>
+         <div>Name-- {userDetailAsProprty.data.fields.Name.value}</div>
+        </template>
+        
+      </div>
+
+    </lightning-card>
+    
+</template>

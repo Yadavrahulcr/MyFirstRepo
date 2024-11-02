@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title =" parent to child non perremitive data">
+     <div class='slds-m-around_medium'>
+
+        <lightning-carousel>
+            <template for:each ={carousalDetails} for:item='item'>
+                <lightning-carousel-image
+                key={item.header}
+                src ={item.scr}
+                header ={item.header}
+                description = {item.description}>
+                
+
+            </lightning-carousel-image>
+
+                       
+            </template>
+        </lightning-carousel>
+    
+
+     </div>
+     
+    
+       
+
+     </lightning-card>
+        <!-- patrnt to child on action -->
+      <div class='slds-m-bottom_medium'></div>
+     <lightning-card title='parent to child communication on action '>
+        <div class='slds-m-around_medium'>
+                
+                <lightning-progress-bar value={percent} size="large"></lightning-progress-bar>
+            
+         
+
+        </div>
+    
+     </lightning-card>
+    
+</template>

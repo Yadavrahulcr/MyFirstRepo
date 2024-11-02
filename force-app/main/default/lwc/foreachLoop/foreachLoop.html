@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="for each loop">
+        <div class="slds-m-around_medium">
+            <template for:each={car} for:item="car">
+                <ul class="slds-has-dividers_around-space" key={car}>
+                    <li class="slds-item">{car}</li>
+                    
+                    </ul>
+            </template>
+        </div>
+    </lightning-card>
+     <div class="slds-m-top_large"></div>
+
+     <lightning-card title="iterator loop">
+       <div class="slds-m-around_medium">
+        <template iterator:mndp={faimly}>
+            <div key={mndp.value.name}>
+                <template lwc:if= {mndp.first}>
+                    <div> <strong>  Manku and papa age difference</strong>  </div>
+                </template>
+                <ul class="slds-has-dividers_around">
+                    <li class="slds-item"> <strong> {mndp.value.name}</strong> {mndp.value.age} </li>
+                    </ul>
+                    <template lwc:if={mndp.last}>
+                        <div>thank you</div>
+                    </template>
+             </div>
+        </template>
+    </div>
+ </lightning-card>
+        
+        
+
+</template>
